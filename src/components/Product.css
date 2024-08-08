@@ -1,0 +1,26 @@
+.product {
+    background-color: #fbfbfc;
+    border: 1px solid gray;
+    width: 300px;
+    height: 280px;
+    display: inline-block;
+    margin: 12px;
+}
+
+.product h3 {
+    color: darkcyan;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.product img {
+    padding: 10px;
+}
+.product .prices {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.product .prices label {
+    flex: 1;
+}
