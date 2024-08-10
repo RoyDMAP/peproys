@@ -1,17 +1,18 @@
 import "./Product.css";
 import QuantityPicker from "./QuantityPicker";
 
-function Product() {
+function Product(props) {
     return (
        <div className="product">
 
-            <img src="/images/brakes.jpeg" alt=" " />
+            <img src={props.data.image} alt="" />
 
-            <h3>I'm a product</h3>
+            <h3>{props.data.title}</h3>
 
         <div className="prices">
-            <label>$ price</label>
-            <label>$ total</label>
+            <label>Price: $ {props.data.price}</label>
+            <label>Total: $ {props.data.price}</label>
+            
         </div>
 
         <div>
@@ -24,3 +25,7 @@ function Product() {
 }
 
 export default Product;
+
+/* Use props communication to share with each component, controls each product display*/
+
+/* multiple products can be added in the DataService.js */

@@ -5,6 +5,7 @@
     height: 280px;
     display: inline-block;
     margin: 12px;
+    vertical-align: top;
 }
 
 .product h3 {
@@ -15,6 +16,7 @@
 
 .product img {
     padding: 10px;
+    height: 150px;
 }
 .product .prices {
     display: flex;

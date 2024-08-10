@@ -6,3 +6,10 @@ background-color: #fbfbfc;
 .catalog h1 {
     color: darkcyan;
 }
+.catalog .filter-list button{
+    margin-right: 6x;
+    font-weight: bold;
+}
+.catalog .product-list {
+    margin-top: 12px;
+}

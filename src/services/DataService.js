@@ -1,9 +1,9 @@
-const catalog = [
+export const catalog = [
     {
         "title": "Brakes",
         "price": 42.00,
         "image": "/images/brakes.jpeg",
-        "category": "Braking system",
+        "category": "Breaking system",
         "_id": 123232,
     },
     {
@@ -20,4 +20,41 @@ const catalog = [
         "category": "Engine",
         "_id": 123232,
     },
+    {
+        "title": "A:C Compressor",
+        "price": 300.00,
+        "image": "/images/A:C Compressor.webp",
+        "category": "Engine",
+        "_id": 123232,
+    },
+    {
+        "title": "Spark Plug",
+        "price": 25.00,
+        "image": "/images/Spark Plug.jpeg",
+        "category": "Ignition",
+        "_id": 123232,
+    }, 
+    {
+        "title": "Radiator",
+        "price": 125.00,
+        "image": "/images/radiator.jpeg",
+        "category": "Cooling system",
+        "_id": 123232,
+    },  
+    {
+        "title": "Muffler",
+        "price": 250.00,
+        "image": "/images/muffler.jpeg",
+        "category": "Exhaust",
+        "_id": 123232,
+    },
+    {
+        "title": "camshaft",
+        "price": 300.00,
+        "image": "/images/camshaft.jpeg",
+        "category": "Engine",
+        "_id": 123232,
+    },      
 ]
+
+export const categories =["Engine", "Breakingsystem", "ignition", "Cooling system", "Exhaust"];
