@@ -1,11 +1,13 @@
 .product {
     background-color: #fbfbfc;
     border: 1px solid gray;
+    border-radius: 4px; 
     width: 300px;
     height: 280px;
     display: inline-block;
     margin: 12px;
     vertical-align: top;
+    background-color: white;
 }
 
 .product h3 {

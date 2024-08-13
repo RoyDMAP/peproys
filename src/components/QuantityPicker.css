@@ -3,3 +3,6 @@
     display: inline-block;
     margin-right: 20px;
 }
+.qt-picker button {
+    margin: 5px;
+}

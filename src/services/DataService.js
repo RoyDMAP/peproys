@@ -21,7 +21,7 @@ export const catalog = [
         "_id": 123232,
     },
     {
-        "title": "A:C Compressor",
+        "title": "AC Compressor",
         "price": 300.00,
         "image": "/images/A:C Compressor.webp",
         "category": "Engine",
@@ -49,7 +49,7 @@ export const catalog = [
         "_id": 123232,
     },
     {
-        "title": "camshaft",
+        "title": "Camshaft",
         "price": 300.00,
         "image": "/images/camshaft.jpeg",
         "category": "Engine",

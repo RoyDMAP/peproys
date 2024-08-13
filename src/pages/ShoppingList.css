@@ -1,0 +1,12 @@
+.shopping-list {
+    min-height: 600px;
+    background-color: #f7eaea;
+}
+
+shopping.list .capture {
+    width: 450px;
+    border: 1px solid #6a6b6b;
+    border-radius: 4px;
+    background-color: white;
+    padding: 12px;
+}

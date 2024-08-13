@@ -8,7 +8,7 @@ function Catalog(){
             <h1>Check our amazing Catalog</h1>
 
         <div className= 'filter-list'>
-            {categories.map(cat => <button>{cat}</button>)}
+            {categories.map(cat => <button className='btn bt-sm btn-success'>{cat}</button>)}
         </div>
             {catalog.map(prod => <Product data={prod} />)}
        </div>

@@ -1,15 +1,23 @@
 .catalog {
-background-color: #fbfbfc;
+background-color: #ebebeb;
 
 }
-
 .catalog h1 {
     color: darkcyan;
+
 }
 .catalog .filter-list button{
     margin-right: 6x;
     font-weight: bold;
+
 }
 .catalog .product-list {
     margin-top: 12px;
+
 }
+.filter-list button {
+    margin: 5px;
+    gap: 5px;
+    
+}
+
