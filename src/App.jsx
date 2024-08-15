@@ -5,28 +5,33 @@ import Footer from './components/Footer';
 import Catalog from './pages/Catalog';
 import About from './pages/About';
 import ShoppingList from './pages/ShoppingList';
+import Home from './pages/Home';
+import Admin from './pages/Admin';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <Navbar></Navbar>
-     
-     <Catalog />
+      <Navbar />
 
-     <About />
-
-     <ShoppingList />
-
+      <Routes>
+      <Route path='/catalog' element={<Catalog />}></Route>
+      <Route path='/about' element={  <About />}></Route>
+      <Route path='/shoppinglist' element={<ShoppingList />}></Route>
+      <Route path='/home' element={<Home />}></Route>
+      <Route path='/admin' element={<Admin />}></Route>
+      </Routes>
 
       <Footer />
-
-
     </div>
+    </BrowserRouter>
   );
 }
 
