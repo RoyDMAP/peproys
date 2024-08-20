@@ -7,6 +7,17 @@ import { Link } from 'react-router-dom';
 function Navbar() {
 
     const cart = useContext(GlobalContext).cart;
+
+    function getNumOfProducts() {
+        let total = 0;
+        for (let i=0; i < cart.length; i++) {
+            let prod = cart[i];
+            total += prod.quantity;
+        }
+
+        return total;
+    }
+    
     return (
         <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
             <div className="container-fluid">
@@ -60,7 +71,7 @@ function Navbar() {
                     </ul>
                     <form className="d-flex" role="search">
                         <Link className="btn btn-outline-light" to="/cart">
-                            {cart.length} View Cart
+                            {getNumOfProducts()} View Cart
                         </Link>
                     </form>
                 </div>

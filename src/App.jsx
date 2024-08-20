@@ -7,6 +7,8 @@ import About from './pages/About';
 import ShoppingList from './pages/ShoppingList';
 import Home from './pages/Home';
 import Admin from './pages/Admin';
+import Cart from './pages/Cart';
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -24,11 +26,13 @@ function App() {
           <Navbar />
 
           <Routes>
+            <Route path='/' element={<Home />}></Route>
             <Route path='/catalog' element={<Catalog />}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/shoppinglist' element={<ShoppingList />}></Route>
             <Route path='/home' element={<Home />}></Route>
             <Route path='/admin' element={<Admin />}></Route>
+            <Route path='/cart' element={<Cart />}></Route>
           </Routes>
 
           <Footer />
