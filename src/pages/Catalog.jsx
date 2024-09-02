@@ -1,12 +1,31 @@
 import Product from "../components/Product";
 import "./Catalog.css";
-import GlobalContext from '../context/GlobalContext';
-import { catalog, categories } from '../services/DataService';
-import { useContext } from "react";
+//import GlobalContext from '../context/GlobalContext';
+import DataService, { catalog, categories } from '../services/DataService';
+import { useEffect, useState } from "react";
+//import { useEffect } from "react";
 
 function Catalog(){
+    const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
+    //const catalogGlobal = useContext(GlobalContext).catalog;
 
-    const catalogGlobal = useContext(GlobalContext).catalog;
+    async function loadProducts() {
+        let prods = await DataService.getCatalog();
+        setProducts(prods);
+
+    }
+
+    async function loadCategories() {
+        let cats = await DataService.getCategories();
+        setCategories(cats);
+
+    }
+
+    useEffect(function() {
+        loadProducts();
+        loadCategories();
+    }, []);
    
     
     return (
@@ -18,7 +37,7 @@ function Catalog(){
         </div>
 
         <div className='product-list'>
-            {catalogGlobal.map(prod => <Product data={prod} />)}
+            {products.map(prod => <Product data={prod} />)}
         </div>
             
        </div>

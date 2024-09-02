@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import './Admin.css';
 import GlobalContext from "../context/GlobalContext";
+import DataService from "../services/DataService";
 
 function Admin() {
     const [products, setProducts] = useState({
@@ -44,12 +45,14 @@ function Admin() {
         setProducts(copy);
     }
 
-    function saveProducts() {
-        let copy = [...allProducts];
-        copy.push(products);
-        setAllProducts(copy);
-        addProductToCatalog(products);
-       
+    async function saveProducts() {
+        console.log(products);
+        let fixedProd = {...products};
+        fixedProd.price = parseFloat(fixedProd.price);
+
+        let resp = await DataService.saveProduct(fixedProd);
+        console.log(resp);
+           
     }
 
     return (
